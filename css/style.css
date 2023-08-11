@@ -1,63 +1,77 @@
 body {
-  font-family: "Open Sans",sans-serif ;
+  font-family: "Open Sans", sans-serif;
 }
 
-.landing-page{
-    min-height: 100vh;
-    background-image : url("../imgs/img2.jpg");
-    background-size: cover;
-    position: relative;
+.landing-page {
+  min-height: 100vh;
+  background-image: url("../imgs/img2.jpg");
+  background-size: cover;
+  position: relative;
 }
 
-.landing-page .overlay{
-    background-color: #0000004f;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    z-index: 1;
+.landing-page .overlay {
+  background-color: #0000004f;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1;
 }
 
-.header-area{
-    position: relative;
-    z-index: 2;
-    display: flex;
-    padding: 15px;
+.header-area {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  padding: 15px;
 }
 
-.header-area .logo{    
-    width: 300px;
-    padding: 15px;
-    font-weight: bold;
-    font-size: larger;
+.header-area .logo {
+  width: 300px;
+  padding: 15px;
+  font-weight: bold;
+  font-size: larger;
 }
 
-.header-area .links{
-    list-style: none;
-    padding-right: 30px;
-    padding-left: 0;
-    width: 100%;
-    text-align: right;
-    font-weight: bold;
+.header-area .links {
+  list-style: none;
+  padding-right: 30px;
+  padding-left: 0;
+  width: 100%;
+  text-align: right;
+  font-weight: bold;
 }
 
-.header-area .links li{
-    display: inline-block;
-    margin-left: 20px;
-
+.header-area .links li {
+  display: inline-block;
+  margin-left: 20px;
+}
+li a {
+  text-decoration: none;
+}
+li a:hover,
+.active {
+  color: #7c4c4c;
+  transition: 0.3s;
+}
+.intro {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+  color: #474a45;
 }
 
-.intro{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50% ,-50%);
-    z-index: 2;
-    text-align: center;
-    color: #3f3f38;
+.intro h1 {
+  font-size: 40px;
 }
-
-.intro h1 span{
-    color: #4b5754;
+.intro h1 span {
+  color: #7c4c4c;
+}
+.intro p {
+  color: #3f3f38;
+  font-size: 20px;
+  line-height: 1.6;
 }
