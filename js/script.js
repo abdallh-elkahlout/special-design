@@ -25,7 +25,7 @@ setInterval(() => {
     introH1Span.style.color = "#72791f";
     logo.style.color = "white";
     desc.style.color = "white";
-  } else if (landingPage.style.backgroundImage == 'url("../imgs/img2.jpg")') {
+  } else{
     introH1.style.color = "#3f3f38";
     introH1Span.style.color = "#7c4c4c";
     desc.style.color = "#3f3f38";
