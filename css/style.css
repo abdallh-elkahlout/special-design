@@ -76,3 +76,31 @@ li a:hover,
   font-size: 20px;
   line-height: 1.6;
 }
+
+.setting-box {
+  position: fixed;
+  left: -200px;
+  top: 0;
+  background-color: white;
+  width: 200px;
+  z-index: 1000;
+  transition: 0.3s;
+  min-height: 100vh;
+}
+.setting-box.open {
+  left: 0;
+}
+.setting-box .toggle-setting {
+  position: absolute;
+  top: 100px;
+  background-color: white;
+  text-align: center;
+  right: -30px;
+  cursor: pointer;
+}
+.setting-box .toggle-setting .fa-gear {
+  padding: 8px 0;
+  width: 30px;
+}
+.setting-box .setting-container {
+}
