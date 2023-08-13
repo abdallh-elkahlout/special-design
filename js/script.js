@@ -17,7 +17,7 @@ let logo = document.querySelector(".logo");
 let images = ["img1.jpg", "img2.jpg"];
 
 setInterval(() => {
-  let randomNum = Math.floor(Math.random() * images.length);
+  let randomNum = Math.floor(Math.random() * 2);
   landingPage.style.backgroundImage =
     'url("../imgs/' + images[randomNum] + '")';
 }, 2000);
