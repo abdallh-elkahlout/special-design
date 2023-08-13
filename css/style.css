@@ -74,7 +74,7 @@ li a:hover,
   font-size: 40px;
 }
 .intro h1 span {
-  color:var(--main-color);
+  color: var(--main-color);
 }
 .intro p {
   color: #3f3f38;
@@ -136,7 +136,7 @@ li a:hover,
   opacity: 1;
 }
 .setting-box .option-box .colors-list li:first-child {
-  background-color:var(--main-color);
+  background-color: #7c4c4c;
 }
 .setting-box .option-box .colors-list li:nth-child(2) {
   background-color: #72791f;
