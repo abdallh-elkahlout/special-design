@@ -1,3 +1,8 @@
+
+:root{
+  --main-color:#7c4c4c;
+
+}
 body {
   font-family: "Open Sans", sans-serif;
 }
@@ -52,7 +57,7 @@ li a {
 }
 li a:hover,
 .active {
-  color: #7c4c4c;
+  color: var(--main-color);
   transition: 0.3s;
 }
 .intro {
@@ -69,7 +74,7 @@ li a:hover,
   font-size: 40px;
 }
 .intro h1 span {
-  color: #7c4c4c;
+  color:var(--main-color);
 }
 .intro p {
   color: #3f3f38;
@@ -102,5 +107,46 @@ li a:hover,
   padding: 8px 0;
   width: 30px;
 }
-.setting-box .setting-container {
+.setting-box .setting-container .option-box {
+  padding: 20px;
+}
+
+.setting-box .option-box h4 {
+  margin: 0;
+  color: #666;
+}
+
+.setting-box .option-box .colors-list {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+
+.setting-box .option-box .colors-list li {
+  width: 20px;
+  height: 20px;
+  background-color: #333;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0.5;
+  display: inline-block;
+}
+
+.setting-box .option-box .colors-list li.active {
+  opacity: 1;
+}
+.setting-box .option-box .colors-list li:first-child {
+  background-color:var(--main-color);
+}
+.setting-box .option-box .colors-list li:nth-child(2) {
+  background-color: #72791f;
+}
+.setting-box .option-box .colors-list li:nth-child(3) {
+  background-color: #4caf50;
+}
+.setting-box .option-box .colors-list li:nth-child(4) {
+  background-color: #009688;
+}
+.setting-box .option-box .colors-list li:nth-child(5) {
+  background-color: #fa9292;
 }

@@ -20,14 +20,17 @@ setInterval(() => {
   let randomNum = Math.floor(Math.random() * images.length);
   landingPage.style.backgroundImage =
     'url("../imgs/' + images[randomNum] + '")';
-  if (landingPage.style.backgroundImage == 'url("../imgs/img1.jpg")') {
-    introH1.style.color = "black";
-    introH1Span.style.color = "#72791f";
-    logo.style.color = "white";
-    desc.style.color = "white";
-  } else{
-    introH1.style.color = "#3f3f38";
-    introH1Span.style.color = "#7c4c4c";
-    desc.style.color = "#3f3f38";
-  }
 }, 2000);
+
+// switch colors
+
+const colorsLi = document.querySelectorAll(".colors-list li");
+colorsLi.forEach((li) => {
+  li.addEventListener("click", (e) => {
+    //set color on root
+    document.documentElement.style.setProperty(
+      "--main-color",
+      e.target.dataset.color
+    );
+  });
+});
