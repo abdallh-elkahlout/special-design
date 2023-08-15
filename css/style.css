@@ -3,6 +3,9 @@
   --main-color:#7c4c4c;
 
 }
+*{
+  box-sizing: border-box;
+}
 body {
   font-family: "Open Sans", sans-serif;
 }
@@ -108,7 +111,12 @@ li a:hover,
   width: 30px;
 }
 .setting-box .setting-container .option-box {
-  padding: 20px;
+  padding: 10px;
+  margin: 15px;
+  text-align: center;
+  border:2px solid var(--main-color);
+  border-radius:4px;
+
 }
 
 .setting-box .option-box h4 {
@@ -133,7 +141,7 @@ li a:hover,
 }
 
 .setting-box .option-box .colors-list li.active {
-  opacity: 1;
+  border: 2px solid black;
 }
 .setting-box .option-box .colors-list li:first-child {
   background-color: #7c4c4c;

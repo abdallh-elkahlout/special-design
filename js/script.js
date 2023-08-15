@@ -1,5 +1,4 @@
 // toggle soin
-
 document.querySelector(".setting-box .toggle-setting .fa-gear").onclick =
   function () {
     this.classList.toggle("fa-spin");
@@ -32,5 +31,30 @@ colorsLi.forEach((li) => {
       "--main-color",
       e.target.dataset.color
     );
+    localStorage.setItem("color-option", e.target.dataset.color);
+
+    e.target.parentElement.querySelectorAll(".active").forEach((el) => {
+      el.classList.remove("active");
+    });
+
+    //add active class
+    e.target.classList.add("active");
   });
 });
+
+// local storage
+
+let mainColor = localStorage.getItem("color-option");
+
+if (mainColor !== null) {
+  document.documentElement.style.setProperty(
+    "--main-color",
+    localStorage.getItem("color-option")
+  );
+  document.querySelectorAll(".colors-list li").forEach((el) => {
+    el.classList.remove("active");
+    if (el.dataset.color === mainColor) {
+      el.classList.add("active");
+    }
+  });
+}
