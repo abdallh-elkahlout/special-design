@@ -15,14 +15,41 @@ let logo = document.querySelector(".logo");
 
 let images = ["img1.jpg", "img2.jpg"];
 
-setInterval(() => {
-  let randomNum = Math.floor(Math.random() * images.length);
-  landingPage.style.backgroundImage =
-    'url("../imgs/' + images[randomNum] + '")';
-}, 2000);
+let randomImg = true;
+let backgroungInterval;
+
+const randomel = document.querySelectorAll(".option-box span");
+randomel.forEach((span) => {
+  span.addEventListener("click", (e) => {
+    e.target.parentElement.querySelectorAll(".active").forEach((el) => {
+      el.classList.remove("active");
+    });
+
+    //add active class
+    e.target.classList.add("active");
+
+    if (e.target.dataset.background === "yes") {
+      randomImg = true;
+      randomImage();
+    } else {
+      randomImg = false;
+      clearInterval(backgroungInterval);
+    }
+  });
+});
+
+//random image
+function randomImage() {
+  if (randomImg === true) {
+    backgroungInterval = setInterval(() => {
+      let randomNum = Math.floor(Math.random() * images.length);
+      landingPage.style.backgroundImage =
+        'url("../imgs/' + images[randomNum] + '")';
+    }, 1500);
+  }
+}
 
 // switch colors
-
 const colorsLi = document.querySelectorAll(".colors-list li");
 colorsLi.forEach((li) => {
   li.addEventListener("click", (e) => {
@@ -42,6 +69,8 @@ colorsLi.forEach((li) => {
   });
 });
 
+// switch background
+
 // local storage
 
 let mainColor = localStorage.getItem("color-option");
@@ -58,3 +87,4 @@ if (mainColor !== null) {
     }
   });
 }
+randomImage();
