@@ -18,6 +18,28 @@ let images = ["img1.jpg", "img2.jpg"];
 let randomImg = true;
 let backgroungInterval;
 
+// local storage for background
+
+let backgroundLocal = localStorage.getItem("background-option");
+if (backgroundLocal !== null) {
+  if (backgroundLocal == "true") {
+    randomImg = true;
+  } else {
+    randomImg = false;
+  }
+
+  // remove active button
+
+  document.querySelectorAll(".option-box span").forEach((el) => {
+    el.classList.remove("active");
+  });
+
+  if (backgroundLocal == "true") {
+    document.querySelector(".yes").classList.add("active");
+  } else {
+    document.querySelector(".no").classList.add("active");
+  }
+}
 const randomel = document.querySelectorAll(".option-box span");
 randomel.forEach((span) => {
   span.addEventListener("click", (e) => {
@@ -31,9 +53,11 @@ randomel.forEach((span) => {
     if (e.target.dataset.background === "yes") {
       randomImg = true;
       randomImage();
+      localStorage.setItem("background-option", true);
     } else {
       randomImg = false;
       clearInterval(backgroungInterval);
+      localStorage.setItem("background-option", false);
     }
   });
 });
@@ -71,7 +95,7 @@ colorsLi.forEach((li) => {
 
 // switch background
 
-// local storage
+// local storage for color
 
 let mainColor = localStorage.getItem("color-option");
 
