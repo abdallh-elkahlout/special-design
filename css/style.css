@@ -37,6 +37,7 @@ body {
   padding: 15px;
   font-weight: bold;
   font-size: larger;
+  color: var(--main-color);
 }
 
 .header-area .links {
@@ -168,7 +169,7 @@ li a:hover,
   font-weight: bold;
   padding: 3px;
   background-color: var(--main-color);
-  opacity: .5;
+  opacity: 0.5;
   color: white;
 }
 .option-box .yes.active {
@@ -176,5 +177,39 @@ li a:hover,
 }
 .option-box .no.active {
   opacity: 1;
+}
 
+.container {
+  margin: auto;
+  width: 1400px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.about {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+}
+.about .info {
+  flex: 1;
+  padding: 50px;
+}
+.about .info h2 {
+  font-weight: bold;
+  font-size: 30px;
+  color: var(--main-color);
+  margin: 0 0 10px;
+}
+.about .info p {
+  line-height: 1.8;
+  color: #777;
+  font-size: 19px;
+}
+.about .image {
+  flex: 1;
+  text-align: center;
+}
+.about img {
+  width: 400px;
 }
